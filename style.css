@@ -1,0 +1,280 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(37, 19, 9);
+    padding:4rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.circle-logo {
+    background-color: #e5c173;
+    border-radius: 50%;
+    width: 100px;
+    height:100px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .circle-logo .logo {
+    position: absolute;
+    bottom: 0;
+    width: 110%;
+  }
+
+  header {
+    background-color: rgb(37, 19, 9);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.1rem 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  header .navigation {
+    display: inline-flex;
+    gap: 5.5rem;
+  }
+
+ li {
+    list-style: none;
+  }
+  
+ a {
+    color: #fff;
+    font-weight: 600;
+    transition:0.2s;
+    font-size: 1.2rem;
+  }
+
+   a:hover {
+    color: #e5c173;
+  }
+
+ main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    gap: 3rem;
+    padding: 3rem 0;
+ }
+
+ aside {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+ }
+
+ .text-container {
+    line-height: 50px;
+    text-align: left;
+ }
+
+ .title {
+    font-size: 2.8rem;
+    color: #fff;
+ }
+
+ .sub-title {
+    font-size: 3.5rem;
+    color: #e5c173;
+ }
+
+ .text {
+    color: #fff;
+    text-align: justify;
+ }
+
+.circle-image {
+    background-color: rgb(37, 19, 9);
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle-image .image-xicara {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Seção Home */
+
+.home {
+    /* border-top: 1.5px solid #e5c173; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    order: 1;
+    padding: 10rem 0;
+    gap: 15rem;
+    position: relative;
+}
+
+.paragrafo {
+    order: 2;
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.3;
+}
+.text-home {
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: left;
+    margin-top: 1.4rem;
+}
+
+article {
+    order:1;
+}
+
+.img-produto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.1rem;
+}
+
+.img-copo {
+    width: 18rem;
+}
+
+.img-produto-span {
+    color: #e5c173;
+    font-size: 1.05rem;
+}
+
+/* Seção Produtos */
+
+.Products {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    padding: 8rem 0;
+}
+
+.text-products {
+    color: #fff;
+    line-height: 30px;
+}
+
+.name {
+    color: #e5c173;
+    font-size: 1.3rem;
+}
+
+.graos {
+    filter: drop-shadow(5px 20px 10px rgba(24, 14, 3, 0.849));
+    width: 25rem;
+}
+/* Seção contato */
+
+.contact {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3.8rem 0;
+}
+
+.text-contact {
+    color: #fff;
+    line-height: 30px;
+}
+
+form {
+    width: 25rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.user {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-textarea {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+textarea {
+    width: 95%;
+    height: 5rem;
+}
+.button {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #e5c173;
+    background: transparent;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #e5c173;
+    color: rgb(37, 19, 9);
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: flex-end;
+   justify-content: space-between;
+   margin-top: 3rem;
+   margin-bottom: 2rem;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    color: #e5c173;
+    font-weight: 600;
+}
+
+.icons {
+    display: flex;
+    gap: 2rem;
+}
+
+i {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+i:hover {
+    color: #e5c173;
+    transform: scale(1.3)
+}

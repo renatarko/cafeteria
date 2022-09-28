@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Cafeteria</title>
+</head>
+<body>
+        <header>
+            <div class="circle-logo">
+                <img class="logo" src="./assets/logo.png" alt="logo">
+            </div>
+            
+            <ul class="navigation">
+                    <li><a href="#about">Sobre nós</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+            </ul>
+        </header>
+
+            <main  data-aos="fade-down" >
+                <aside>
+                    <div class="text-container" fade-right>
+                        <h1 class="title">O Melhor Café</h1>
+                        <h1 class="sub-title">do Brasil</h1>
+                    </div>
+                    
+                    <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum illo minima dolor iste dolorem, esse eum! Impedit necessitatibus eum ratione cum labore, facere modi voluptates, delectus excepturi, magni vero fugiat.</p>
+                </aside>
+
+                <article data-aos="fade-left">
+                    <div class="circle-image">
+                        <img class="image-xicara" src="./assets/xicara1.png" alt="">
+                    </div>
+                </article>
+            </main>
+
+        <section class="home"  data-aos="fade-left" id="about">
+            <div class="paragrafo">
+                <h2 class="sub-title">30 anos no mercado</h2>
+                <h3>A Brasil Café é referência em qualidade!</h3>
+                <p class="text-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laborum exercitationem, debitis animi quod voluptatem, veniam quasi totam fuga sit eius.</p>
+
+            </div>
+
+            <article data-aos="fade-down">
+                <div class="img-produto">
+                    <img class="img-copo"src="./assets/copo.png" alt="">
+                    <span class="img-produto-span">Seu café em qualquer lugar</span>
+                </div>
+                
+            </article>
+        </section>
+
+        <section class="Products" id="products">
+            <div  data-aos="fade-down">
+                <h2  class="sub-title">Produtos Selecionados</h2>
+
+                <p class="text-products">Nós da <span class="name">Brasil Café</span> trabalhamos com padrão Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis corrupti voluptate, excepturi minus incidunt id animi, molestiae eius quaerat, qui maxime asperiores. Illo voluptates animi cupiditate quaerat omnis, ducimus accusamus.</p>
+            </div>
+
+            <article data-aos="fade-left">
+                <img class="graos" src="./assets/graosnoar.png" alt="foto de grãos de café flutuando">
+            </article>
+        </section>
+
+        <section class="contact"  data-aos="fade-down" id="contact">
+            <div>
+                <h2  class="sub-title">Fale Conosco!</h2>
+
+                <p class="text-contact">Sua opnião é muito importante para nós! Faça sua pergunta, queremos o seu Feedback!</p>
+            </div>
+            
+            <div>
+                <form action="">
+                    <input class="user" type="text" placeholder="Nome" />
+                    <input  class="user" type="email" placeholder="E-mail"/>
+                    <div class="form-textarea">
+                        <textarea class="user">Escreva sua mensagem!</textarea>
+                        <input class="button" type="submit" value="Enviar">
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+
+        <footer >
+            <span class="logo-text">Brasil Café</span>
+            <div class="icons">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+
+            </div>
+        </footer>
+
+        
+</body>
+<script src="https://kit.fontawesome.com/e1a0909dfe.js" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+    });
+  </script>
+</html>
