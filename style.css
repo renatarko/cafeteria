@@ -12,18 +12,24 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     background-color: rgb(37, 19, 9);
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* overflow-x: hidden;  */
+    /* max-width: 1200px; */
+    overflow-x: hidden; 
 }
 
 /* main {
@@ -56,6 +62,7 @@ body {
   header .navigation {
     display: inline-flex;
     gap: 5rem;
+    padding: 0 10px;
   }
 
   header .navigation li {
@@ -109,10 +116,11 @@ body {
   }
 
   .img-container {
-    display: flex;
+    text-align: center;
+    /* display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 1.1rem;
+    gap: 1.1rem; */
 }
 
   .text-container{
@@ -147,8 +155,8 @@ body {
  }
  
 .image {
-    width: 25rem;
-    height: 25rem;
+    width: 70%;
+    min-width: 200px
 }
 
  /* Seção about */
@@ -158,7 +166,7 @@ body {
 }
 
 .image-about {
-    width: 18rem;
+    width: 70%;
     order: 1;
     overflow: hidden;
 }
@@ -184,18 +192,16 @@ body {
 
 .graos {
     filter: drop-shadow(5px 20px 10px rgba(24, 14, 3, 0.849));
-    width: 25rem;
+    width: 75%;
 }
 
 /* Seção Contato */
 
 .contact {
-    /* margin-top: 5rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* padding: 3.8rem 0; */
 }
 
 .text-contact {
@@ -203,22 +209,29 @@ body {
     line-height: 30px;
 }
 
+.title-contact {
+    width: 100%;
+    padding: 0 1rem;
+}
+
 form {
-    width: 25rem;
-    padding: 3rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    width: 20rem;
+    /* padding: 3rem 0; */
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    margin-top: 30px;
 }
 
 .user {
+    width: 100%;
     padding: 8px;
     border-radius: 10px;
     border: none;
 }
 
 .form-textarea {
-    width: 25rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,34 +261,38 @@ textarea {
 
 /* footer */
 footer {
-    background-image: url("./assets/coffee-g986a956df_1280.png");
+    /* background-image: url("./assets/coffee-g986a956df_1280.png"); */
     width: 100%;
-    height: 4.5rem;
+    height: 5rem;
     display: flex;
-    align-items: center;
+    align-items:center;
    justify-content: space-between;
-   margin-top: 3rem;
+   margin-top: 5rem;
    margin-bottom: 2rem;
-   padding: 1.5rem; 
+   padding:0 1rem; 
 }
 
 .logo-text {
+    width: 20rem;
     font-size: 1.6rem;
     background-color:rgb(37, 19, 9);
     color:#e5c173;
     font-weight: 600;
-    padding:5px;
+    padding:0 5px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .icons-container {
-    padding: 0 5px;
+    background-color: #e5c173;
+    width: 20rem;
+    padding: 8px;
     border-radius: 10px;
-    color: #fff;
+    color:rgb(37, 19, 9);
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
 }
 .icons {
@@ -285,27 +302,33 @@ footer {
 
 .icones {
     font-size: 1.5rem;
-    color:#fff;
+    color:rgb(37, 19, 9);
     transition: all 0.3s;
 }
 
 .icones:hover {
-    color: rgb(37, 19, 9);
+    border-radius: 50%;
+    color:#fff;
     transform: scale(1.3)
 }
 
 @media (max-width: 790px ) {
-
-    header .navigation .icones-menu{
-        visibility: hidden;
+    header .logo{ 
+        width: 3rem;
     }
-
+    header .navigation{ 
+        gap: 2.5rem;
+    }
+    header .navigation .icones-menu{
+        font-size: 0.9rem;
+    }
     .container {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
     .text-container{
         width: 80%;
+        padding: .9rem;
     }
     .box-text {
         gap: 0;
@@ -320,10 +343,6 @@ footer {
         font-size: 1.8rem;
     }
 
-    .image {
-        width: 20rem;
-        height: auto;
-    }
     .about {
         order: 1;
     }
@@ -336,6 +355,82 @@ footer {
     }
 
     .products {
+        order: 1;
+    }
+
+    .graos{
         order: 2;
+    }
+
+    .icons-container {
+        width: 15rem;
+    }
+    .logo-text {
+       text-align: left;
+       gap: 0;
+    }
+    .sociais {
+        font-size: 0.5rem;
+    }
+    .icons {
+        gap:0.7rem
+    }
+}
+
+@media (max-width: 495px){
+    
+    header .navigation{ 
+        gap: 1rem;
+    }
+    header .navigation .icones-menu{
+        font-size: 0.7rem;
+    }
+    form {
+        width:14rem ;
+    }
+    .text-contact {
+        text-align: center;
+    }
+}
+
+@media (max-width: 370px) {
+    header {
+        padding: 1.1rem .4rem;
+    }
+    header .navigation {
+        gap:.8rem;
+    }
+}
+
+@media (max-width: 310px) {
+    header {
+        padding: 1.1rem 1.5rem
+    }
+
+    header .navigation {
+        visibility: hidden;
+    }
+
+    .icons-container {
+        width: 0;
+        visibility: hidden;
+        padding: 0;
+    }
+    .logo-text {
+        width: 10;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 240px) {
+    .sub-title {
+        font-size: 1.5rem;
+    }
+    .text{
+        font-size: .9rem;
+    }
+    .name {
+        font-size: 1rem;
     }
 }
