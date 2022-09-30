@@ -270,15 +270,14 @@ textarea {
 
 /* footer */
 footer {
-    /* background-image: url("./assets/coffee-g986a956df_1280.png"); */
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     display: flex;
     align-items:center;
    justify-content: space-between;
-   margin-top: 5rem;
+   margin-top: 7rem;
    margin-bottom: 2rem;
-   padding:0 1rem; 
+   padding:0 1.3rem; 
 }
 
 .logo-text {
@@ -287,9 +286,7 @@ footer {
     background-color:rgb(37, 19, 9);
     color:#e5c173;
     font-weight: 600;
-    padding:0 5px;
     border-radius: 10px;
-    text-align: center;
 }
 
 .icons-container {
@@ -297,19 +294,23 @@ footer {
     width: 20rem;
     padding: 8px;
     border-radius: 10px;
-    color:rgb(37, 19, 9);
-    font-weight: 600;
+    
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
+.icons-container .icons {
+    color:rgb(37, 19, 9);
+    font-weight: 600;
+}
+
 .icons {
     display: flex;
     gap: 2rem;
 }
 
-.icones {
+.icons-container .icones {
     font-size: 1.5rem;
     color:rgb(37, 19, 9);
     transition: all 0.3s;
@@ -386,9 +387,6 @@ footer {
         top: -7px;
     }
 
-    header .logo{ 
-        width: 4rem;
-    }
     .container {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -428,48 +426,47 @@ footer {
     .graos{
         order: 2;
     }
-
-    .icons-container {
-        width: 15rem;
-    }
-    .logo-text {
-       text-align: left;
-       gap: 0;
-    }
-    .sociais {
-        font-size: 0.5rem;
-    }
-    .icons {
-        gap:0.7rem
-    }
+    
 }
 
-@media (max-width: 495px){
+@media (max-width: 499px){
+    header {
+        padding: 1.1rem .4rem;
+    }
     form {
         width:14rem ;
     }
     .text-contact {
         text-align: center;
     }
-}
 
-@media (max-width: 370px) {
-    header {
-        padding: 1.1rem .4rem;
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
-}
 
-@media (max-width: 310px) {
-    .icons-container {
-        width: 0;
-        visibility: hidden;
-        padding: 0;
+    .icons-container .icones {
+        color: #fff;
     }
     .logo-text {
-        width: 10;
-        text-align: center;
-        font-size: 1rem;
+       text-align: left;
+       gap: 0;
     }
+    .sociais {
+        color: #fff;
+        font-size: 0.8rem;
+    }
+    .icons-container {
+        background-color: transparent;
+        gap: 15px;
+        padding: 0;
+     }
+     .logo-text {
+         width: 10rem;
+         text-align: center;
+         font-size: 1rem;
+     }
 }
 
 @media (max-width: 240px) {
