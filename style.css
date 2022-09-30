@@ -32,19 +32,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* max-width: 1200px; */
     overflow-x: hidden; 
 }
-
-/* main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px auto;
-    width: 100%;
-    max-width: 1000px;
-} */
 
   header {
     background-color: rgb(37, 19, 9);
@@ -58,7 +47,6 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    box-sizing: border-box;
   }
 
   .logo {
@@ -120,9 +108,7 @@ body {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items:center;
-    /* display: flex;
-    justify-content: space-between; */
-    /* padding: 0 1.5rem; */
+    position: relative;
   }
 
   .img-container {
@@ -208,6 +194,7 @@ body {
 /* Seção Contato */
 
 .contact {
+    width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,6 +209,7 @@ body {
 .title-contact {
     width: 100%;
     padding: 0 1rem;
+    text-align: center;
 }
 
 form {
@@ -324,6 +312,11 @@ footer {
 }
 
 @media (max-width: 790px ) {
+    .container {
+        /* width: 45rem; */
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
     .menu {
         display: block;
         position: absolute;
@@ -388,10 +381,6 @@ footer {
         top: -7px;
     }
 
-    .container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
     .text-container{
         width: 80%;
         padding: .9rem;
@@ -427,10 +416,17 @@ footer {
     .graos{
         order: 2;
     }
+
+    .contact {
+        width: 25rem;
+    }
     
 }
 
 @media (max-width: 499px){
+    .contact{
+        width: 20rem;
+    }
     header {
         padding: 1.1rem .4rem;
     }
@@ -470,7 +466,11 @@ footer {
      }
 }
 
+
 @media (max-width: 240px) {
+    .contact{
+        width: 15rem;
+    }
     .sub-title {
         font-size: 1.5rem;
     }
