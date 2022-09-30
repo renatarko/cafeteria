@@ -17,6 +17,10 @@ img {
     height: auto;
 }
 
+li {
+    list-style: none;
+  }
+
 html {
     scroll-behavior: smooth;
 }
@@ -45,6 +49,7 @@ body {
   header {
     background-color: rgb(37, 19, 9);
     width:100%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,21 +60,26 @@ body {
     z-index: 100;
   }
 
-  header .logo {
+  .logo {
     width: 5rem;
+    padding: .8rem;
   }
 
-  header .navigation {
-    display: inline-flex;
+  .menu {
+    display: flex;
     gap: 5rem;
     padding: 0 10px;
   }
-
-  header .navigation li {
-    list-style: none;
-  }
   
-  header .navigation .icones-menu {
+  .menu a {
+    display: block;
+  }
+
+  .btn-mobile {
+    display: none;
+  }
+
+  header .menu .icones-menu {
     color: #fff;
     font-weight: 600;
     font-size: 1.1rem;
@@ -77,27 +87,26 @@ body {
     transition: color 0.2s;
   }
 
-  header .navigation .icones-menu:hover,
-  header .navigation .icones-menu.active {
+  header .menu .icones-menu:hover,
+  header .menu .icones-menu.active {
     color: #e5c173;
   }
 
-  header .navigation .icones-menu::after {
+  header .menu .icones-menu::after {
     content: "";
     width: 0%;
     height: 1px;
     background-color: #e5c173;
     position: absolute;
     left: 0;
-    bottom: -1rem;
+    bottom: -.5rem;
 
     transition: width 0.2s;
   }
 
-  header .navigation .icones-menu:hover::after, header .navigation .icones-menu.icones-menu.active::after {
+  header .menu .icones-menu:hover::after, header .menu .icones-menu.icones-menu.active::after {
     width: 100%;
   }
-
 
   /* Layout */
   .spacing {
@@ -313,14 +322,72 @@ footer {
 }
 
 @media (max-width: 790px ) {
+    .menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        right: 0;
+        background-color:rgba(37, 19, 9, 0.781) ;
+        text-align: center;
+        transition: .4s;
+        height: 0;
+        z-index: 100;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    header .nav .menu .icones-menu {
+        padding: 1.3rem;
+        font-size: 2rem;
+        color: #e5c173;
+        text-align: center;
+    }
+
+    .nav.show .menu {
+        height: calc(100vh - 100px);
+        visibility: visible;
+    }
+
+    .btn-mobile {
+        display: flex;
+        padding: .8rem;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+    }
+
+    .hamburguer {
+        border-top: 2px solid #e5c173;
+        width: 30px;
+    }
+
+    .hamburguer::after, .hamburguer::before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 30px;
+        background-color: #e5c173;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    .nav.show .hamburguer {
+        border-top-color: transparent;
+    }
+
+    .nav.show .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    .nav.show .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
     header .logo{ 
-        width: 3rem;
-    }
-    header .navigation{ 
-        gap: 2.5rem;
-    }
-    header .navigation .icones-menu{
-        font-size: 0.9rem;
+        width: 4rem;
     }
     .container {
         grid-template-columns: 1fr;
@@ -378,13 +445,6 @@ footer {
 }
 
 @media (max-width: 495px){
-    
-    header .navigation{ 
-        gap: 1rem;
-    }
-    header .navigation .icones-menu{
-        font-size: 0.7rem;
-    }
     form {
         width:14rem ;
     }
@@ -397,20 +457,9 @@ footer {
     header {
         padding: 1.1rem .4rem;
     }
-    header .navigation {
-        gap:.8rem;
-    }
 }
 
 @media (max-width: 310px) {
-    header {
-        padding: 1.1rem 1.5rem
-    }
-
-    header .navigation {
-        visibility: hidden;
-    }
-
     .icons-container {
         width: 0;
         visibility: hidden;
