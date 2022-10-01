@@ -196,6 +196,7 @@ body {
     max-width: 400px;
     padding: 20px;
     margin: 0 auto;
+    border: 1px solid #e5c173;
 }
 
 .carrousel {
@@ -216,7 +217,7 @@ body {
 }
 
 .img-carrousel {
-    max-width: 250px;
+    max-width: 335px;
     height: auto;
     flex-shrink:0;
     opacity: .5;
@@ -230,8 +231,8 @@ body {
     width: 60px;
     height: 60px;
     position: absolute;
-    top: -2rem;
-    left: 12rem;
+    top: -1.9rem;
+    left: 10.6rem;
     right: 0;
     /* bottom: 0; */
     font-size: 22px;
