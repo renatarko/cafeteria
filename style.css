@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden; 
+    /* overflow-x: hidden;  */
 }
 
   header {
@@ -186,16 +186,16 @@ body {
     font-weight: 600;
 }
 
-.graos {
+/* .graos {
     filter: drop-shadow(5px 20px 10px rgba(24, 14, 3, 0.849));
     width: 75%;
-}
+} */
 
 .container-carrousel {
     position: relative;
     max-width: 400px;
     padding: 20px;
-    margin: 0 auto;
+    margin:10px;
     border: 1px solid #e5c173;
 }
 
@@ -217,7 +217,7 @@ body {
 }
 
 .img-carrousel {
-    max-width: 335px;
+    width: 335px;
     height: auto;
     flex-shrink:0;
     opacity: .5;
@@ -228,19 +228,17 @@ body {
 }
 
 .btn-next{
-    width: 60px;
-    height: 60px;
+    width: 30px;
     position: absolute;
-    top: -1.9rem;
-    left: 10.6rem;
+    top: 0;
+    left: auto;
     right: 0;
-    /* bottom: 0; */
+    bottom: 0;
     font-size: 22px;
     text-align: center;
     color: #fff;
     cursor: pointer;
     border: none;
-    border-radius:100px;
     background:linear-gradient(to right, transparent 0%, #e5c173 200%);
     opacity: .5;
     transition: .3s;
@@ -250,14 +248,6 @@ body {
     opacity: 1;
 }
 /* Seção Contato */
-
-.contact {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
 .text-contact {
     color: #fff;
@@ -270,13 +260,19 @@ body {
     text-align: center;
 }
 
+.container-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
 form {
-    width: 20rem;
-    /* padding: 3rem 0; */
+    width: 100%;
     display: grid;
     justify-items: center;
     gap: 1rem;
-    margin-top: 30px;
+    margin: 0 2rem;
 }
 
 .user {
@@ -474,22 +470,13 @@ footer {
     .graos{
         order: 2;
     }
-
-    .contact {
-        width: 25rem;
-    }
     
 }
 
 @media (max-width: 499px){
-    .contact{
-        width: 20rem;
-    }
+
     header {
         padding: 1.1rem .4rem;
-    }
-    form {
-        width:14rem ;
     }
     .text-contact {
         text-align: center;
@@ -522,13 +509,28 @@ footer {
          text-align: center;
          font-size: 1rem;
      }
+
+     .container-carrousel {
+        max-width: 300px;
+    }
+
+    .img-carrousel {
+        width: 230px;
+    }
+}
+
+@media (max-width: 396px) {
+    .container-carrousel {
+        max-width: 210px;
+    }
+
+    .img-carrousel {
+        width: 150px;
+    }
 }
 
 
 @media (max-width: 240px) {
-    .contact{
-        width: 15rem;
-    }
     .sub-title {
         font-size: 1.5rem;
     }
