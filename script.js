@@ -15,19 +15,25 @@ function showMenu() {
 
 btnMobile.addEventListener('click', showMenu)
 
+// Carrousel seção produtos
+
 const btnNext = document.querySelector('.btn-next')
-const images = document.querySelectorAll('.img-carrousel')
 
 let current = 0
-let maxCurrent = images.length - 1
+
+const images = document.querySelectorAll('.img-carrousel')
+
+let maxCurrent = images.length - 1;
+console.log(maxCurrent) 
 
 
 function handleClickNext() {
-    if(current < maxCurrent) {
+    if (current < maxCurrent) {
         current += 1
     } else {
         current = 0
     }
+    console.log(current)
     
     images.forEach((image) => image.classList.remove('current'))
 
@@ -36,7 +42,7 @@ function handleClickNext() {
         behavior:'smooth'
     })
 
-    images[current].classList.add('current')
+    images[current].classList.add('current')   
 }
 
 btnNext.addEventListener('click', handleClickNext)

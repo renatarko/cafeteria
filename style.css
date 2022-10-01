@@ -227,15 +227,14 @@ body {
 }
 
 .btn-next{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     position: absolute;
-    top: 12rem;
-    left: auto;
-    right: 1rem;
+    top: -2rem;
+    left: 12rem;
+    right: 0;
     /* bottom: 0; */
-    font-size: 20px;
-    padding: 5px;
+    font-size: 22px;
     text-align: center;
     color: #fff;
     cursor: pointer;
