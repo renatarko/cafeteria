@@ -245,8 +245,8 @@ header.light-theme .menu .icones-menu {
 .image-grao-home {
   max-width: 250px;
   position: absolute;
-  top: 140px;
-  left: -320px;
+  top: 500px;
+  left: 40px;
 }
 
 /* Seção about */
@@ -286,8 +286,8 @@ header.light-theme .menu .icones-menu {
 .image-galho-about {
   position: absolute;
   width: 500px;
-  top: 200px;
-  left: -200px;
+  top: 1300px;
+  left: -50px;
   z-index: -1;
   transform: rotate(180deg);
 }
@@ -508,10 +508,10 @@ footer {
     margin-top: 4rem;
   }
 
-  .image-grao-home {
+  /* .image-grao-home {
     max-width: 300px;
     left: -200px;
-  }
+  } */
 }
 
 @media (max-width: 1100px) {
@@ -538,7 +538,7 @@ footer {
   }
 }
 
-@media (max-width: 890px) {
+@media (max-width: 910px) {
   .container {
     display: grid;
     justify-items: center;
@@ -641,12 +641,14 @@ footer {
 
   .image-galho-about {
     max-width: 350px;
-    top: 1000px;
+    top: 2100px;
     left: -50px;
   }
 
   .image-grao-home {
-    opacity: 0;
+    top: 1000px;
+    left: 0;
+    /* opacity: 0; */
   }
 
   footer {
@@ -682,6 +684,17 @@ footer {
   .container-form {
     width: 250px;
   }
+
+  .image-galho-about {
+    max-width: 300px;
+    top: 2100px;
+    left: -50px;
+  }
+  .image-grao-home {
+    top: 850px;
+    left: 0;
+    /* opacity: 0; */
+  }
 }
 
 @media (max-width: 380px) {
@@ -703,6 +716,10 @@ footer {
 
   .image-grao-products {
     left: 100px;
+  }
+
+  .image-grao-home {
+    opacity: 0;
   }
 
   .btn-next-left {
