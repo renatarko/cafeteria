@@ -50,12 +50,22 @@ function handleClickNext() {
 
 const input = document.querySelector(".btn-theme");
 const body = document.querySelector("body");
-
-console.log(input);
-console.log(body);
+const header = document.querySelector("header");
+const firstText = document.querySelectorAll("h2");
+const text = document.querySelectorAll(".text");
+const title = document.querySelector(".title");
+const subTitle = document.querySelector(".sub-title");
+const logoText = document.querySelector(".logo-text");
 
 const toggleThemeMode = () => {
   body.classList.toggle("light-theme");
+  header.classList.toggle("light-theme");
+  title.classList.toggle("light-theme");
+  subTitle.classList.toggle("ligth-theme");
+  logoText.classList.toggle("ligth-theme");
+
+  firstText.forEach((text) => text.classList.toggle("light-theme"));
+  text.forEach((text) => text.classList.toggle("light-theme"));
 };
 
 input.onchange = toggleThemeMode;

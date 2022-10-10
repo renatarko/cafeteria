@@ -39,10 +39,6 @@ body {
   /* overflow-x: hidden;  */
 }
 
-body.light-theme {
-  background-color: #eeecec;
-}
-
 header {
   background-color: rgb(37, 19, 9);
   width: 100%;
@@ -157,6 +153,38 @@ input:checked + .slider::before {
   background-color: #e5c173;
 }
 
+body.light-theme {
+  background-color: #eeecec;
+}
+
+header.light-theme {
+  background-color: #eeecec;
+}
+
+header.light-theme .menu .icones-menu {
+  color: rgb(37, 19, 9);
+}
+
+.title.light-theme {
+  color: rgb(37, 19, 9);
+}
+
+.sub-title.light-theme {
+  color: #bf7c15;
+}
+
+.text.light-theme {
+  color: rgb(37, 19, 9);
+}
+
+.first-text.light-theme {
+  color: rgb(37, 19, 9);
+}
+
+.logo-text.light-theme {
+  color: #bf7c15;
+}
+
 /* Layout */
 .section {
   padding: 12.5rem;
@@ -241,12 +269,12 @@ input:checked + .slider::before {
   order: 1;
 }
 
-.first-textabout {
+.first-text {
   color: #fff;
   font-size: 1.05rem;
   text-transform: uppercase;
 }
-.secundy-textabout {
+.secundy-text {
   color: #e5c173;
   font-size: 3rem;
 }
@@ -270,17 +298,6 @@ input:checked + .slider::before {
   color: #e5c173;
   font-size: 1.3rem;
   font-weight: 600;
-}
-
-.first-textproducts {
-  color: #fff;
-  font-size: 1.05rem;
-  text-transform: uppercase;
-}
-
-.secundy-textproducts {
-  color: #e5c173;
-  font-size: 3rem;
 }
 
 .image-grao-products {
@@ -357,17 +374,6 @@ input:checked + .slider::before {
   padding: 4rem 0;
 }
 
-.first-textcontact {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-
-.secundy-textcontact {
-  color: #e5c173;
-  font-size: 3rem;
-}
-
 .container-form {
   width: 500px;
   display: flex;
@@ -389,11 +395,11 @@ input:checked + .slider::before {
   color: #251309;
   text-align: center;
   opacity: 0.8;
+  font-weight: 600;
 }
 
 .whats:hover {
   opacity: 1;
-  box-shadow: 0px 0px 10px 5px rgba(52, 51, 51, 0.409);
 }
 
 form {
@@ -424,18 +430,18 @@ textarea {
 .button {
   width: 100%;
   padding: 5px;
-  border: 1px solid #e5c173;
-  background: transparent;
-  color: #fff;
+  border: none;
+  background: #e5c173;
+  color: rgb(37, 19, 9);
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
+  opacity: 0.8;
 }
 
 .button:hover {
-  background-color: #e5c173;
-  color: rgb(37, 19, 9);
+  opacity: 1;
 }
 
 /* footer */
@@ -521,26 +527,14 @@ footer {
   .sub-title {
     font-size: 2.3rem;
   }
-  .first-textabout {
+  .first-text {
     font-size: 0.9rem;
   }
-  .secundy-textabout {
+  .secundy-text {
     font-size: 2.3rem;
   }
   .text {
     font-size: 0.95rem;
-  }
-  .first-textproducts {
-    font-size: 0.9rem;
-  }
-  .secundy-textproducts {
-    font-size: 2.3rem;
-  }
-  .first-textcontact {
-    font-size: 0.9rem;
-  }
-  .secundy-textcontact {
-    font-size: 2.3rem;
   }
 }
 
