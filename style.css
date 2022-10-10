@@ -39,6 +39,10 @@ body {
   /* overflow-x: hidden;  */
 }
 
+body.light-theme {
+  background-color: #eeecec;
+}
+
 header {
   background-color: rgb(37, 19, 9);
   width: 100%;
@@ -102,6 +106,57 @@ header .menu .icones-menu.icones-menu.active::after {
   width: 100%;
 }
 
+/* Theme */
+
+.switch {
+  position: relative;
+  width: 3.5rem;
+  height: 1.8rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5c173;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  z-index: 300;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 1.4rem;
+  width: 1.4rem;
+  left: 0.3rem;
+  top: 50%;
+  background-color: rgb(37, 19, 9);
+  transition: 0.4s;
+  border-radius: 20px;
+  transform: translateY(-50%);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(37, 19, 9);
+}
+
+input:checked + .slider::before {
+  left: calc(100% - 1.7rem);
+  background-color: #e5c173;
+}
+
 /* Layout */
 .section {
   padding: 12.5rem;
@@ -130,19 +185,12 @@ header .menu .icones-menu.icones-menu.active::after {
 }
 
 /* Seção Apresentação: home */
-/* .home {
-  background: url(./assets/galho.svg) no-repeat;
-  background-size: 30%;
-  background-position: right 0 top 0;
-  z-index: 200;
-} */
-
 .image-galho-home {
   max-width: 400px;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 200;
+  z-index: 100;
 }
 
 .title {
@@ -163,6 +211,7 @@ header .menu .icones-menu.icones-menu.active::after {
 
 .image-cafe {
   min-width: 200px;
+  z-index: 200;
 }
 
 .image-grao-home {
@@ -326,12 +375,32 @@ header .menu .icones-menu.icones-menu.active::after {
   margin-top: 30px;
 }
 
+.contact-whats {
+  width: auto;
+  margin-top: 4rem;
+  display: flex;
+}
+
+.whats {
+  width: 180px;
+  background-color: #e5c173;
+  padding: 0.6rem;
+  border-radius: 10px;
+  color: #251309;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.whats:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 10px 5px rgba(52, 51, 51, 0.409);
+}
+
 form {
   width: 100%;
   display: grid;
   justify-items: center;
   gap: 1rem;
-  margin: 0 2rem;
 }
 
 .user {
@@ -424,20 +493,79 @@ footer {
   opacity: 1;
 }
 
-@media (max-width: 790px) {
-  .container {
-    /* width: 45rem; */
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@media (max-width: 1310px) {
+  .section {
+    padding: 8rem;
   }
+
+  .spacing {
+    margin-top: 4rem;
+  }
+
+  .image-grao-home {
+    max-width: 300px;
+    left: -200px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .section {
+    padding: 8rem 4rem;
+  }
+}
+
+@media (max-width: 995px) {
+  .title {
+    font-size: 2.3rem;
+  }
+  .sub-title {
+    font-size: 2.3rem;
+  }
+  .first-textabout {
+    font-size: 0.9rem;
+  }
+  .secundy-textabout {
+    font-size: 2.3rem;
+  }
+  .text {
+    font-size: 0.95rem;
+  }
+  .first-textproducts {
+    font-size: 0.9rem;
+  }
+  .secundy-textproducts {
+    font-size: 2.3rem;
+  }
+  .first-textcontact {
+    font-size: 0.9rem;
+  }
+  .secundy-textcontact {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .container {
+    display: grid;
+    justify-items: center;
+  }
+
+  .text-container {
+    width: 480px;
+    text-align: center;
+  }
+
+  header {
+    padding: 1.1rem 0.4rem;
+  }
+
   .menu {
     display: block;
     position: absolute;
     width: 100%;
     top: 100px;
     right: 0;
-    background-color: rgba(37, 19, 9, 0.781);
-    text-align: center;
+    background-color: rgba(37, 19, 9, 0.956);
     transition: 0.4s;
     height: 0;
     z-index: 100;
@@ -446,7 +574,8 @@ footer {
   }
 
   header .nav .menu .icones-menu {
-    padding: 1.3rem;
+    margin-top: 3rem;
+    padding: 1rem;
     font-size: 2rem;
     color: #e5c173;
     text-align: center;
@@ -495,106 +624,101 @@ footer {
     top: -7px;
   }
 
-  .text-container {
-    width: 80%;
-    padding: 0.9rem;
-  }
-  .box-text {
-    gap: 0;
-    line-height: 2rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .sub-title {
-    font-size: 1.8rem;
-  }
-
-  .about {
-    order: 1;
-  }
-  .image-about {
-    order: 2;
-    width: 14rem;
-  }
-  .text-image {
-    order: 2;
-  }
-
-  .products {
+  .about-text {
     order: 1;
   }
 
-  .graos {
+  .about-image {
     order: 2;
   }
-}
 
-@media (max-width: 499px) {
-  header {
-    padding: 1.1rem 0.4rem;
-  }
-  .text-contact {
-    text-align: center;
-  }
-
-  footer {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .icons-container .icones {
-    color: #fff;
-  }
-  .logo-text {
-    text-align: left;
-    gap: 0;
-  }
-  .sociais {
-    color: #fff;
-    font-size: 0.8rem;
-  }
-  .icons-container {
-    background-color: transparent;
-    gap: 15px;
+  .contact {
     padding: 0;
   }
-  .logo-text {
-    width: 10rem;
-    text-align: center;
-    font-size: 1rem;
+
+  .contact-whats {
+    justify-content: center;
+    align-items: center;
   }
 
-  .container-carrousel {
+  .image-galho-home {
     max-width: 300px;
   }
 
-  .img-carrousel {
-    width: 230px;
+  .image-galho-about {
+    max-width: 350px;
+    top: 1000px;
+    left: -50px;
+  }
+
+  .image-grao-home {
+    opacity: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
-@media (max-width: 396px) {
-  .container-carrousel {
-    max-width: 210px;
+@media (max-width: 510px) {
+  .text-container {
+    width: 380px;
+  }
+  .image-cafe {
+    width: 400px;
   }
 
-  .img-carrousel {
-    width: 150px;
+  .image-xicara {
+    width: 400px;
+  }
+
+  .image-grao-products {
+    width: 350px;
+    top: 80px;
+  }
+
+  .btn-next-left {
+    left: 0px;
+  }
+  .btn-next-rigth {
+    right: 50px;
+  }
+
+  .container-form {
+    width: 250px;
   }
 }
 
-@media (max-width: 240px) {
-  .sub-title {
-    font-size: 1.5rem;
+@media (max-width: 380px) {
+  .text-container {
+    width: 270px;
   }
-  .text {
-    font-size: 0.9rem;
+  .image-cafe {
+    width: 300px;
   }
-  .name {
-    font-size: 1rem;
+
+  .image-xicara {
+    width: 300px;
+  }
+
+  .image-grao-products {
+    width: 250px;
+    top: 80px;
+  }
+
+  .image-grao-products {
+    left: 100px;
+  }
+
+  .btn-next-left {
+    left: 0px;
+  }
+  .btn-next-rigth {
+    right: 50px;
+  }
+
+  .img-carrousel {
+    width: 240px;
   }
 }

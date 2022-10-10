@@ -33,7 +33,6 @@
 <body>
     <header>
         <img class="logo" src="./assets/logo.png" alt="logo">
-
         <nav class="nav">
             <button class="btn-mobile">
                 <span class="hamburguer"></span>
@@ -43,15 +42,19 @@
                 <li><a class="icones-menu" href="#about">Sobre nós</a></li>
                 <li><a class="icones-menu" href="#products">Produtos</a></li>
                 <li><a class="icones-menu" href="#contact">Contato</a></li>
+                <label class="switch">
+                    <input class="btn-theme" type="checkbox">
+                    <span class="slider"></span>
+                </label>
             </ul>
         </nav>
 
     </header>
 
     <section class="section home" id="home">
-        <div class="container">
+        <div class="container spacing">
             <img class="image-galho-home" src="./assets/galho.svg" alt="">
-            <aside class="text-container" data-aos="fade-up">
+            <aside class="text-container">
                 <div class="box-text">
                     <h1 class="title">O Melhor Café <br> <span class="sub-title">do Brasil</span></h1>
                     <!-- <h1 class="sub-title">do Brasil</h1> -->
@@ -62,15 +65,15 @@
                 </p>
             </aside>
 
-            <article class="img-container" data-aos="fade-left">
+            <article class="img-container">
                 <img class="image-cafe" src="./assets/Cafe.svg" alt="imagem">
             </article>
         </div>
     </section>
 
     <section class="section" id="about">
-        <div class="container about">
-            <aside class="text-container about" data-aos="fade-left">
+        <div class="container about-text spacing">
+            <aside class="text-container about">
                 <div class="box-text">
                     <h2 class="first-textabout">referência no mercado</h2>
                     <h3 class="secundy-textabout">30 anos no mercado</h3>
@@ -86,7 +89,7 @@
                 </p>
             </aside>
 
-            <article class="img-container" data-aos="fade-down">
+            <article class="img-container about-image">
                 <img class="image-xicara" src="./assets/Xicara.svg" alt="">
                 <p class="text-image">Seu café em qualquer lugar</p>
             </article>
@@ -95,8 +98,8 @@
     </section>
 
     <section class="section" id="products">
-        <div class="container">
-            <aside class="text-container products" data-aos="fade-right">
+        <div class="container spacing">
+            <aside class="text-container products">
                 <div class="box-text">
                     <h2 class="first-textproducts">padrão de qualidade</h2>
                     <h2 class="secundy-textproducts">Produtos Selecionados</h2>
@@ -109,7 +112,7 @@
                     uma tecnologia de ponta.</p>
             </aside>
 
-            <article class="img-container" data-aos="fade-down">
+            <article class="img-container">
                 <div class="container-carrousel">
                     <button class="btn-next-rigth"><i class="btn-arrow fa-solid fa-arrow-right"></i></button>
                     <div class="carrousel-wrapper">
@@ -134,15 +137,19 @@
 
     <section class="section" id="contact">
         <div class="container contact">
-            <aside class="text-container" data-aos="fade-down">
+            <aside class="text-container">
                 <h2 class="first-textcontact">contato</h2>
                 <h2 class="secundy-textcontact">Fale Conosco!</h2>
                 <p class="text">Sua opnião é muito importante para nós! <br> Faça sua pergunta, queremos o seu
                     Feedback!
                 </p>
+                <div class="contact-whats">
+                    <a class="whats" href="#whats">Whatsapp</a>
+                </div>
             </aside>
+
             <div class="container-form">
-                <form action="" id="form" data-aos="fade-up">
+                <form action="" id="form">
                     <input class="user" type="text" placeholder="Nome" required />
                     <input class="user" type="email" placeholder="E-mail" required />
                     <textarea class="user" type="text" placeholder="Mensagem!" required></textarea>
