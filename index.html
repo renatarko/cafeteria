@@ -32,7 +32,15 @@
 
 <body>
     <header>
-        <img class="logo" src="./assets/logo.png" alt="logo">
+        <div class="div-logo">
+            <img class="logo" src="./assets/logo.png" alt="logo">
+        </div>
+       
+        <div class="div-nav">
+            <label class="switch">
+                <input class="btn-theme" type="checkbox">
+                <span class="slider"></span>
+            </label>
             <nav class="nav">
                 <button class="btn-mobile">
                     <span class="hamburguer"></span>
@@ -44,7 +52,7 @@
                     <li><a class="icones-menu" href="#contact">Contato</a></li>
                 </ul>
             </nav>
-
+        </div>
     </header>
 
     <section class="section home" id="home">
@@ -110,22 +118,9 @@
             </aside>
 
             <article class="img-container">
-                    <div class="container-carrousel">
-                    <!-- <button class="btn-next-rigth"><i class="btn-arrow fa-solid fa-arrow-right"></i></button> -->
-                    <div class="carrousel-wrapper">
-                        <img class="image-grao-products" src="./assets/grao.svg" alt="">
-                        <div class="carrousel">
-                            <img id="imagem1" class="img-carrousel" src="./assets/image1.png" alt="imagem1">
-                            <!-- <img id="imagem2" class="img-carrousel" src="./assets/image2.png" alt="imagem2">
-                            <img id="imagem3" class="img-carrousel" src="./assets/copo.png" alt="imagem3"> -->
-                        </div>
-                        <!-- <div class="container-label">
-                            <label class="ranger-carrousel" for="imagem1"></label>
-                            <label class="ranger-carrousel" for="imagem2"></label>
-                            <label class="ranger-carrousel" for="imagem3"></label>
-                        </div> -->
-                    </div>
-                    <!-- <button class="btn-next-left"><i class="btn-arrow fa-solid fa-arrow-left"></i></button> -->
+                <div class="image-container">
+                    <img class="image-grao-products" src="./assets/grao.svg" alt="">
+                    <img class="image-products" src="./assets/image1.png" alt="imagem1">
                 </div>
             </article>
         </div>
@@ -146,9 +141,9 @@
 
             <div class="container-form">
                 <form action="" id="form">
-                    <input class="user" type="text" placeholder="Nome" required />
-                    <input class="user" type="email" placeholder="E-mail" required />
-                    <textarea class="user" type="text" placeholder="Mensagem!" required></textarea>
+                    <input class="input" type="text" placeholder="Nome" required />
+                    <input class="input" type="email" placeholder="E-mail" required />
+                    <textarea class="input" type="text" placeholder="Mensagem!" required></textarea>
                     <input class="button" value="Enviar" type="submit">
                 </form>
             </div>
