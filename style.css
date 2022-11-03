@@ -735,11 +735,20 @@ footer {
 }
 
 @media (max-width: 340px){
-  .image-grao-products1 {
-    display: none;
+   .title {
+    font-size: 1.9rem;
   }
-
-  .image-grao-products {
-    display: none;
+  .sub-title {
+    font-size: 1.9rem;
+  }
+  .secundy-text{
+    font-size: 1.9rem;
+  }
+  .text {
+    padding: .9rem;
+    font-size: .8rem;
+  }
+  .image-cafe {
+    width: 250px;
   }
 }
