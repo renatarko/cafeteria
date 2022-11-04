@@ -12,8 +12,7 @@ sr.reveal('.products-text',{duration: 1500, delay: 100} )
 sr.reveal('.products-image',{duration: 1500, delay: 100} )
 
 sr.reveal('.contact-text', {duration: 1500, delay: 300})
-sr.reveal('.input', {interval: 30,
-	reset: true,
+sr.reveal('.input', {interval: 16,
   delay: 200,
   duration: 1000
 })
