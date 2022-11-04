@@ -752,3 +752,10 @@ footer {
     width: 250px;
   }
 }
+
+/* ScrollReveal */
+
+.home-text, .image-cafe, .about-text, .about-image, .products-text, .products-image, .contact-text, .input, .button {
+  visibility: hidden;
+  
+}

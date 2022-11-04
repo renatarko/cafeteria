@@ -1,3 +1,28 @@
+// ScrollReveal
+
+window.sr = ScrollReveal({ reset: true })
+
+sr.reveal('.home-text', {duration: 1000, delay: 100})
+sr.reveal('.image-cafe', {duration: 1000, delay: 100})
+
+sr.reveal('.about-text', {duration: 1500, delay: 100})
+sr.reveal('.about-image', {duration: 1500, delay: 100})
+
+sr.reveal('.products-text',{duration: 1500, delay: 100} )
+sr.reveal('.products-image',{duration: 1500, delay: 100} )
+
+sr.reveal('.contact-text', {duration: 1500, delay: 300})
+sr.reveal('.input', {interval: 30,
+	reset: true,
+  delay: 200,
+  duration: 1000
+})
+sr.reveal('.button', {delay: 200,
+  duration: 1000
+})
+
+// Menu responsive
+
 const btnMobile = document.querySelector(".btn-mobile")
 
 function showMenu() {
@@ -14,38 +39,6 @@ function showMenu() {
 }
 
 btnMobile.addEventListener("click", showMenu);
-
-
-// Carrousel seção produtos
-
-const btnNext = document.querySelector(".btn-next-rigth");
-const btnLeft = document.querySelector(".btn-next-left")
-
-let current = 0;
-
-const images = document.querySelectorAll(".img-carrousel");
-
-let maxCurrent = images.length - 1;
-
-function handleClickNext() {
-  if (current < maxCurrent) {
-    current += 1;
-  } else {
-    current = 0;
-  }
-  console.log(current);
-
-  images.forEach((image) => image.classList.remove("current"));
-
-  images[current].scrollIntoView({
-    inline: "center",
-    behavior: "smooth",
-  });
-
-  images[current].classList.add("current");
-}
-
-// btnNext.addEventListener("click", handleClickNext);
 
 // Theme Ligth
 
