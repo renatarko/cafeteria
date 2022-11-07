@@ -16,9 +16,7 @@ sr.reveal('.input', {interval: 16,
   delay: 200,
   duration: 1000
 })
-sr.reveal('.button', {delay: 200,
-  duration: 1000
-})
+
 
 // Menu responsive
 

@@ -369,6 +369,7 @@ form {
   border: 3px solid #bf7c15;
 }
 
+
 .form-textarea {
   width: 100%;
   display: flex;
@@ -384,7 +385,7 @@ textarea {
 
 .button {
   width: 100%;
-  padding: 5px;
+  padding: 0.6rem;
   border: none;
   background: #e5c173;
   color: rgb(37, 19, 9);
@@ -755,7 +756,7 @@ footer {
 
 /* ScrollReveal */
 
-.home-text, .image-cafe, .about-text, .about-image, .products-text, .products-image, .contact-text, .input, .button {
+.home-text, .image-cafe, .about-text, .about-image, .products-text, .products-image, .contact-text, .input {
   visibility: hidden;
   
 }
